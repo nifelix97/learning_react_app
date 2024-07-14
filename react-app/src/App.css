@@ -1,0 +1,84 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@400;500;700&display=swap');
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+    --font-robo: 'Roboto', sans-serif;
+    --font-robo-mono: 'Roboto Mono', monospace;
+}
+body {
+  font-family: var(--font-robo);
+  background-color: #f5f5f5;
+  color: #333;
+  font-size: 1rem;
+  line-height: 1.6;
+  padding: 20px;
+  margin: 20px;
+}
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+section {
+  padding: 20px;
+}
+
+.padding {
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  border-radius: 10px;
+  border:1px solid #f5f5f5;
+  flex-basis: calc(33.333% - 20px);
+  margin: 10px;
+}
+/* Mobile devices */
+@media (max-width: 600px) {
+    .container-wrapper .container {
+      flex-basis: 100%;
+      margin: 5px 0;
+    }
+  }
+  
+  /* Tablets */
+  @media (min-width: 601px) and (max-width: 900px) {
+    .container-wrapper .container {
+      flex-basis: 48%; /* Adjust based on preference, 48% allows for a little space between two containers */
+      margin: 5px 1%;
+    }
+  }
+  
+  /* Desktops and larger screens */
+  @media (min-width: 901px) {
+    .container-wrapper .container {
+      flex-basis: 31%; /* Adjust based on preference, 31% allows for a little space between three containers */
+      margin: 5px 1%;
+    }
+  }
+  .container:hover {
+    background-color: #eaeaea; /* Light grey background on hover */
+    border-color: #ccc; /* Darker border on hover */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Add shadow for depth */
+  }
+
+  .img-container {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px 10px 0 0;
+  }
+
+  .img-container img {
+    border-radius: 10px 10px 0 0; /* Adjust this value as needed */
+  }
+
+  
